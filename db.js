@@ -1,8 +1,14 @@
 /** Database for lunchly */
 
-const pg = require("pg");
+const { Pool } = require("pg");
 
-const db = new pg.Client("postgresql:///lunchly");
+const db = new Pool({
+  user: 'aladamm78',       
+  host: 'localhost',              
+  database: 'lunchly',            
+  password: 'ali011380',   
+  port: 5432,                     
+});
 
 db.connect();
 
